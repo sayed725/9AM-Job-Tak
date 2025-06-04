@@ -90,7 +90,7 @@ const Dashboard = () => {
   );
 };
 const handleShopClick = (shopName) => {
-    window.location.href = `http://${shopName}.${import.meta.env.VITE_SHOP_URL}`;
+    window.location.href = `http://${shopName}.localhost:5173`;
   };
 
   if (loading) return <Loader/>
