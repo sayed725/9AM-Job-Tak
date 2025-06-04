@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -20,7 +21,7 @@ function App() {
         });
         setUser(response.data.user);
       } catch (err) {
-        console.error('Failed to validate token:', err);
+        // console.error('Failed to validate token:', err);
         setUser(null);
       } finally {
         setLoading(false);

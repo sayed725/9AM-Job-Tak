@@ -22,7 +22,7 @@ function ShopDashboard({ setUser, loading, setLoading }) {
         const hostname = window.location.hostname;
         const subdomain = hostname.split('.')[0];
         const targetShopName = paramShopName || (hostname !== 'localhost' && !hostname.includes('127.0.0.1') ? subdomain : null);
-        console.log('Target shop name:', targetShopName, 'Hostname:', hostname, 'Param:', paramShopName);
+        // console.log('Target shop name:', targetShopName, 'Hostname:', hostname, 'Param:', paramShopName);
 
         if (!targetShopName) {
           setShopName(null);
@@ -34,7 +34,7 @@ function ShopDashboard({ setUser, loading, setLoading }) {
           `${import.meta.env.VITE_API_URL}/api/auth/validate-token`,
           { withCredentials: true }
         );
-        console.log('Validate token response:', response.data);
+        // console.log('Validate token response:', response.data);
 
         if (!response.data.valid) {
           throw new Error(response.data.message || 'Invalid token');

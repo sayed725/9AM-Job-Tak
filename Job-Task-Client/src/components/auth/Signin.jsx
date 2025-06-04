@@ -33,6 +33,7 @@ function Signin({ setUser, setLoading }) {
   const onSubmit = async (data) => {
     try {
       setLoading(true);
+      // eslint-disable-next-line no-unused-vars
       const res = await axios.post(
         `${import.meta.env.VITE_API_URL}/auth/signin`,
         data,
@@ -45,7 +46,7 @@ function Signin({ setUser, setLoading }) {
       );
       setUser(validateRes.data.user);
        // Update with { username, shopNames }
-       console.log(res.data);
+      //  console.log(res.data);
       toast.success("Signed In Successfully!");
       navigate("/dashboard", { replace: true });
     } catch (err) {
