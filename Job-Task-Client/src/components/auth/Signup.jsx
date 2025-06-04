@@ -39,7 +39,7 @@ const Signup = () => {
       return;
     }
 
-    // Check for duplicate shop 
+    // Check for duplicate shop names
     const uniqueShops = new Set(shops.map(name => name.toLowerCase()));
     if (uniqueShops.size !== shops.length) {
       setError("Shop names must be unique");
